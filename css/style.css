@@ -3,8 +3,7 @@ body{
     padding: 0;
 }
 header{
-    position: relative;
-    width: 100%;    
+    position: relative;   
     background-image: url("../images/banner-bg.jpg");
     background-color: #555;
     background-repeat: no-repeat;
@@ -71,10 +70,10 @@ header::before{
     text-align: center;
     margin-left: 30px;
 }
-#hamburger{
+.hamburger{
     display: none;
 }
-#hamburger a{
+.hamburger a{
     font-size: 24px;
 }
 .header-navigation a:nth-child(n+2){
@@ -90,18 +89,12 @@ header::before{
     text-align: center;
     max-width: 700px;  
 }
-a:hover{
-    transition: all 1s;
-    color: black;
-}
 .section-container{
-    width: 100%;
     margin-top: 64px;
+}
+.shop-section-container{
     display: flex;
     justify-content: center;
-}
-.trend-section{
-    width: 1660px;
 }
 .section-title h2{
     text-transform: uppercase;
@@ -127,8 +120,9 @@ a:hover{
     width: 25%;
     height: 320px;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
     padding: 0 20px 16px 20px;
     position: relative;
 }
@@ -137,6 +131,7 @@ a:hover{
     position: absolute;
     width: 100%;
     top: 0;
+    left: 0;
     bottom: 0;
     background-color: rgba(0,0,0, 0.5);
 }
@@ -144,21 +139,21 @@ a:hover{
     margin-left: 5px;
 }
 
-#trend1{
+.trend1{
     background-image: url("../images/trend1.jpg");
     background-size: cover;
 }
-#trend2{
+.trend2{
     background-image: url("../images/trend2.jpg");
     background-size: cover;
 
 }
-#trend3{
+.trend3{
     background-image: url("../images/trend3.jpg");
     background-size: cover;
     
 }
-#trend4{
+.trend4{
     background-image: url("../images/trend4.jpg");
     background-size: cover;
     
@@ -179,6 +174,9 @@ a:hover{
     text-decoration: none;
     margin-top: 15px;
 }
+.trend-tags ul{
+    flex-wrap: nowrap;
+}
 .trend-tag a{
     font-size: 14px;
     text-transform: uppercase;
@@ -192,7 +190,7 @@ a:hover{
 }
 .shop-section{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1170px;
     margin-bottom: 60px;
 }
 .shop-img{
@@ -201,39 +199,44 @@ a:hover{
     display: flex;
     margin: 0;
 }
-#shop-item1{
-    background-image: url("../images/shop-item-desk1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right;
-}#shop-item2{
-    background-image: url("../images/shop-item-desk2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-}#shop-item3{
-    background-image: url("../images/shop-item-desk3.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: unset;
-}
 .shop-second-floor{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 .shop-item{
-    width: 350px;
-    height: 500px;
-    box-sizing: border-box;
-    padding: 0 25px 0 25px
+    position: relative;
+    margin-bottom: 64px;
+}
+.article-first-floor{
+    display: flex;
+    justify-content: center;
 }
 .article-second-floor{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    align-items: baseline;
+    position: relative;
+    padding-top: 20px;
+    max-width: 300px;
+    height: 220px;
+    outline: 3px solid #b59f5b;
+    outline-offset: 15px;
+}
+.shop-price{
+    padding-top: 40px;
+}
+.shop-button a{
+    text-decoration: none;
+    padding: 15px 15px;
+    background-color: #b59f5b;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Open Sans";
+    font-weight: 600;
 }
 .shop-price p{
     margin: 0;
@@ -272,15 +275,15 @@ a:hover{
 }
 .main-content-container{
     display: flex;
-    width: 1200px;
-    margin: auto;
-    box-sizing: border-box;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
     margin-top: 64px;
-    padding-left: 15px;
-    padding-right: 15px;
+    box-sizing: border-box;
+    padding: 0 15px;
 }
 main{
-    max-width: 778px;
+    max-width: 65%;
     margin-right: 120px;
 }
 .main-post{
@@ -423,10 +426,14 @@ time{
     margin: 0;
     padding: 0;
 }
-.search form{
+.search {
     position: relative;
-    width: 300px;
+    max-width: 300px;
     margin: 0 auto;
+    overflow: hidden;
+}
+.search label{
+    flex-grow: 1;
 }
 aside input{
     box-sizing: border-box;
@@ -444,7 +451,7 @@ aside input:focus{
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
-    width: 4em;
+    width: 64px;
 
 }
 button{
@@ -457,10 +464,7 @@ button{
     font-size: 14px;
     padding: 14px;
     text-transform: uppercase;
-}
- button:hover{
-    transition: all 1s;
-    background-color: #323232;
+    cursor: pointer;
 }
 .search{
     display: flex;
@@ -589,10 +593,6 @@ textarea{
     background-color: rgba(244,243,241,0);
     border: 3px solid #eeeeee;
 }
-.link-tag a:hover{
-    background-color: rgba(244,243,241,0);
-    border: 3px solid #b59f5b;
-}
 .ul-themes{
     display: flex;
     flex-direction: column;
@@ -628,13 +628,12 @@ sup{
 }
 .socials{
     display: flex;
-    align-items: center;
     margin: 0 auto;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #f4f7f6;
     justify-content: center;
-    width: 1200px;
+    max-width: 1170px;
 }
 .socials a{
     width: 50px;
@@ -682,294 +681,88 @@ sup{
     height: 1px;
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute;
-  }
-  @media screen and (max-width: 1200px) and (orientation: landscape) {
-    .main-content-container, .shop-section, footer, header{
-        padding: 35px;
-        box-sizing: border-box;
-        margin: 0;
-    }
-    header{
-        background-image: url("../images/banner-bg-tablet.jpg");
-        min-width: 641px;
-    }
-    .header-navigation{
-        width: auto;
-    }
-    .header-navigation ul{
-        display: none;
-    }
-    #hamburger{
-        display: flex;
-    }
-    .trend-section{
-        width: 100vw;
-    }
-    .trend-block{
-        width: 25%;
-        margin-bottom: 5px;
-    }
-    .trend-block:not(:first-child){
-        margin-left: 0;
-    }
-    .trend-block:nth-child(2n+2){
-        margin-left: 5px;
-    }
-    .main-content-container{
-        min-width: 641px;
-        width: auto;
-        justify-content: center;
-    }
-    main{
-        margin-right: 35px;
-        width: 60%;
-    }
-    aside{
-        width: 40%;
-    }
-    .popup-container{
-        justify-content: flex-start;
-    }
-    .popup-close{
-        width: 50%;
-    }
-    .popup-block{
-        width: 50%;
-    }
-    .main-post{
-        flex-direction: column;
-        width: 391px;
-    }
-    .main-post img{
-        width: 391px;
-        height: 300px;
-    }
-    .post-content{
-        margin: 0;
-    }
-    .shop-second-floor{
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .shop-item{
-        margin-top: 30px;
-        max-width: 50%;
-        margin-bottom: 35px;
-    }
-    #shop-item1{
-        background-image: url("../images/shop-item-tablet1.jpg");
-    }
-    #shop-item2{
-        background-image: url("../images/shop-item-tablet2.jpg");
-    }
-    #shop-item3{
-        background-image: url("../images/shop-item-tablet3.jpg");
-    }
-    .socials{
-        width: auto;
-    }
-  }
-  @media screen and (max-width: 1200px) and (min-width: 641px) and (orientation: portrait) {
-    .main-content-container, .shop-section, footer, header{
-        padding: 35px;
-        box-sizing: border-box;
-        margin: 0;
-    }
-    header{
-        background-image: url("../images/banner-bg-tablet.jpg");
-        min-width: 641px;
-    }
-    .header-navigation{
-        width: auto;
-    }
-    .header-navigation ul{
-        display: none;
-    }
-    #hamburger{
-        display: flex;
-    }
-    .trend-section{
-        width: 100%;
-    }
-    .section-second-floor{
-        flex-wrap: wrap;
-    }
-    .trend-block{
-        width: 43.7%;
-        margin-bottom: 5px;
-    }
-    .trend-block:not(:first-child){
-        margin-left: 0;
-    }
-    .trend-block:nth-child(2n+2){
-        margin-left: 5px;
-    }
-    .main-content-container{
-        min-width: 641px;
-        width: auto;
-        justify-content: center;
-    }
-    main{
-        margin-right: 35px;
-        width: 60%;
-    }
-    aside{
-        width: 40%;
-    }
-    .popup-container{
-        justify-content: flex-start;
-    }
-    .popup-close{
-        width: 50%;
-    }
-    .popup-block{
-        width: 50%;
-    }
-    .main-post{
-        flex-direction: column;
-        width: 391px;
-    }
-    .main-post img{
-        width: 391px;
-        height: 300px;
-    }
-    .post-content{
-        margin: 0;
-    }
-    .shop-second-floor{
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .shop-item{
-        margin-top: 30px;
-        max-width: 50%;
-        margin-bottom: 35px;
-    }
-    #shop-item1{
-        background-image: url("../images/shop-item-tablet1.jpg");
-    }
-    #shop-item2{
-        background-image: url("../images/shop-item-tablet2.jpg");
-    }
-    #shop-item3{
-        background-image: url("../images/shop-item-tablet3.jpg");
-    }
-    .socials{
-        width: auto;
-    }
 }
-@media (orientation: landscape) and (max-width: 640px){
+/* MEDIA TABLET */
+@media (max-width: 1200px){
     header{
-        background-image: url("../images/banner-mobile.jpg");
-        min-width: 360px;
-    }
-    .header-navigation{
-        width: auto;
-    }
-    .header-logo{
-        width: 100%;
-    }
-    .header-navigation ul{
-        display: none;
-    }
-    #hamburger{
-        display: flex;
+        background-image: url("../images/banner-bg-tablet.jpg");
+        min-width: 641px;
     }
     .header-title{
-        line-height: normal;
-        font-size: 20px;
+        font-size: 40px;
     }
-    .trend-section{
-        width: 100vw;
+    .header-navigation{
+        width: auto;
+    }
+    nav ul{
+        display: none;
+    }
+    .hamburger{
+        display: block;
     }
     .section-second-floor{
         flex-wrap: wrap;
+        justify-content: space-between;
     }
     .trend-block{
-        width: 43.3%;
+        width: 49.7%;
         margin-bottom: 5px;
+    }
+    .trend-title{
+        font-size: 17px;
     }
     .trend-block:not(:first-child){
         margin-left: 0;
     }
-    .trend-block:nth-child(2n+2){
-        margin-left: 5px;
-    }
     .main-content-container{
-        flex-direction: column;
-        width: 360px;
+        padding: 0 36px;
+        justify-content: space-between;
     }
     .main-post{
         flex-direction: column;
-        width: 330px;
-    }
-    .main-post img{
-        min-width: auto;
-        min-height: auto;
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #eeeeee;
     }
     .post-content{
-        padding-top: 15px;
         margin: 0;
     }
     .post-content p{
         width: auto;
     }
+    .main-post img{
+        min-width: 0;
+        min-height: 0;
+    }
+    main{
+        margin-right: 30px;
+    }
     aside{
-        width: 340px;
+        width: 60%;
     }
-    .popup-close{
-        width: 70%;
+    .search{
+        max-width: none;
     }
-    .popup-block{
-        width: 70%;
-    }
-    .shop-second-floor{
-        flex-direction: column;
-    }
-    #shop-item1{
-        background-image: url("../images/shop-item-mobile1.jpg");
-    }
-    #shop-item2{
-        background-image: url("../images/shop-item-mobile2.jpg");
-    }
-    #shop-item3{
-        background-image: url("../images/shop-item-mobile3.jpg");
-    }
-    .socials{
-        width: auto;
-    }
-    footer{
-        padding: 15px;
-        box-sizing: border-box;
-    }
-
 }
-@media screen and (max-width: 640px) and (min-width: 360px) and (orientation: portrait) {
+@media (max-width: 1200px) and (orientation: landscape){
+    .trend-block{
+        width: 24.6%;
+    }
+    .trend-block:not(:first-child){
+        margin-left: 5px;
+    }
+}
+@media (max-width: 640px){
     header{
         background-image: url("../images/banner-mobile.jpg");
-        min-width: 360px;
-    }
-    .header-navigation{
-        width: auto;
+        min-width: 320px;
     }
     .header-logo{
         width: 100%;
     }
-    .header-navigation ul{
-        display: none;
-    }
-    #hamburger{
-        display: flex;
-    }
     .header-title{
         line-height: normal;
         font-size: 20px;
-    }
-    .trend-section{
-        width: 100vw;
-    }
-    .section-second-floor{
-        flex-wrap: wrap;
     }
     .trend-block{
         width: 100%;
@@ -980,50 +773,35 @@ sup{
     }
     .main-content-container{
         flex-direction: column;
-        width: 360px;
-    }
-    .main-post{
-        flex-direction: column;
-        width: 330px;
-    }
-    .main-post img{
-        min-width: auto;
-        min-height: auto;
+        justify-content: center;
+        padding: 15px;
+        margin-top: 40px;
     }
     .post-content{
         padding-top: 15px;
-        margin: 0;
     }
-    .post-content p{
-        width: auto;
-    }
-    aside{
-        width: 340px;
-    }
-    .popup-close{
+    main, aside{
         width: 100%;
-    }
-    .popup-block{
-        width: 90%;
-        box-sizing: content-box;
+        max-width: none;
     }
     .shop-second-floor{
         flex-direction: column;
     }
-    #shop-item1{
-        background-image: url("../images/shop-item-mobile1.jpg");
+    .article-second-floor{
+        width: 285px;
+        margin: auto;
     }
-    #shop-item2{
-        background-image: url("../images/shop-item-mobile2.jpg");
+}
+@media (max-width: 640px) and (orientation: landscape){
+    .section-second-floor{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;    
     }
-    #shop-item3{
-        background-image: url("../images/shop-item-mobile3.jpg");
+    .trend-block{
+        width: 49.4%;
     }
-    .socials{
-        width: auto;
+    .trend-block:nth-child(2n+2){
+        margin-left: 5px;
     }
-    footer{
-        padding: 15px;
-        box-sizing: border-box;
-    }
-} 
+}
