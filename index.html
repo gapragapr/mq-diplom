@@ -3,7 +3,6 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +22,7 @@
                         <li><a href="#0">темы</a></li>
                         <li><a href="#0">контакты</a></li>
                     </ul>
-                    <li id="hamburger"><a href="">&#9776;</a></li>
+                    <div class="hamburger"><a href="">&#9776;</a></div>
                 </nav>
             </div>
             <div class="header-second-floor">
@@ -39,7 +38,7 @@
                 </div>
             </div>
             <div class="section-second-floor">
-                <article id="trend1" class="trend-block">
+                <article class="trend-block trend1">
                     <div class="article-container">
                         <div class="trend-tags">
                             <ul class="trend-tag-list">
@@ -52,7 +51,7 @@
                         </div>
                     </div>
                 </article>
-                <article id="trend2" class="trend-block">
+                <article class="trend-block trend2">
                     <div class="article-container">
                         <div class="trend-tags">
                             <ul class="trend-tag-list">
@@ -64,7 +63,7 @@
                         </div>
                     </div>
                 </article>
-                <article id="trend3" class="trend-block">
+                <article class="trend-block trend3">
                     <div class="article-container">
                         <div class="trend-tags">
                             <ul class="trend-tag-list">
@@ -77,7 +76,7 @@
                         </div>
                     </div>
                 </article>
-                <article id="trend4" class="trend-block">
+                <article class="trend-block trend4">
                     <div class="article-container">
                         <div class="trend-tags">
                             <ul class="trend-tag-list">
@@ -94,7 +93,7 @@
         </section>
     </div>
     <div class="main-content-container">
-    <main>
+        <main>
         <article class="main-post">
             <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post1.jpg" alt="img">
             <div class="post-content">
@@ -221,7 +220,7 @@
                     <div class="post-text-container"><p class="post-text">Узнает основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, <br> химию и микробиологию еды.</p></div>
                 </div>
         </article>
-    </main>
+        </main>
         <aside>
             <section class="sidebar-block">
                 <h2 class="sidebar-block-header">новые посты</h2>
@@ -363,8 +362,8 @@
             </section>
         </aside>
     </div>
-    <section class="section-container">
-        <div class="shop-section">
+    <div class="section-container shop-section-container">
+        <section class="shop-section">
             <div class="shop-first-floor">
                 <div class="section-title">
                     <h2>наши изделия</h2>
@@ -373,60 +372,72 @@
             <div class="shop-second-floor">
                 <article class="shop-item">
                     <div class="article-first-floor">
-                        <div id="shop-item1" class="shop-img"></div>
+                        <picture>
+                            <source srcset="images/shop-item-mobile1.jpg" media="(max-width: 640px)">
+                            <source srcset="images/shop-item-tablet1.jpg" media="(max-width: 1200px)">
+                            <img src="images/shop-item-desk1.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="article-second-floor">
                         <div class="shop-info">
                             <h3 class="shop-item-name">подушка на диван</h3>
                             <p class="shop-text">Набор из двух подушек с модными принтами. Видео о создании <a href="">здесь</a>.</p>
                         </div>
-                    </div>
-                    <div class="article-second-floor">
                         <div class="shop-price">
                             <span class="old-price">1000₽</span>
                             <p>800₽</p>
                         </div>
                         <div class="shop-button">
-                            <button>в магазин</button>
+                            <a href="#0">в магазин</a>
                         </div>
                     </div>
                 </article>
                 <article class="shop-item">
                     <div class="article-first-floor">
-                        <div id="shop-item2" class="shop-img"></div>
-                            <div class="shop-info">
-                                <h3 class="shop-item-name">игрушка «зайчик»</h3>
-                                <p class="shop-text">Интерьерная рукодельная игрушка «Зайчик», созданию которой посвящена <a href="">весенняя серия постов</a> в блоге и несколько подкастов.</p>
-                            </div>
-                        <div class="article-second-floor">
-                            <div class="shop-price">
-                                <p>3500₽</p>
-                            </div>
-                            <div class="shop-button">
-                                <button>в магазин</button>
-                            </div>
+                        <picture>
+                            <source srcset="images/shop-item-mobile2.jpg" media="(max-width: 640px)">
+                            <source srcset="images/shop-item-tablet2.jpg" media="(max-width: 1200px)">
+                            <img src="images/shop-item-desk2.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="article-second-floor">
+                        <div class="shop-info">
+                            <h3 class="shop-item-name">игрушка «зайчик»</h3>
+                            <p class="shop-text">Интерьерная рукодельная игрушка «Зайчик», созданию которой посвящена <a href="">весенняя серия постов</a> в блоге и несколько подкастов.</p>
+                        </div>
+                        <div class="shop-price">
+                            <p>3500₽</p>
+                        </div>
+                        <div class="shop-button">
+                            <a href="#0">в магазин</a>
                         </div>
                     </div>
                 </article>
                 <article class="shop-item">
                     <div class="article-first-floor">
-                        <div id="shop-item3" class="shop-img"></div>
-                            <div class="shop-info">
-                                <h3 class="shop-item-name">шестиугольная рамка</h3>
-                                <p class="shop-text">Необычная рамка для украшения из видео <a href="">«Как сделать рамку из подручных средств за 30 минут»</a>. </p>
-                            </div>
-                        <div class="article-second-floor">
-                            <div class="shop-price">
-                                <span class="old-price">500₽</span>
-                                <p>400₽</p>
-                            </div>
-                            <div class="shop-button">
-                                <button>в магазин</button>
-                            </div>
+                        <picture>
+                            <source srcset="images/shop-item-mobile3.jpg" media="(max-width: 640px)">
+                            <source srcset="images/shop-item-tablet3.jpg" media="(max-width: 1200px)">
+                            <img src="images/shop-item-desk3.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="article-second-floor">
+                        <div class="shop-info">
+                            <h3 class="shop-item-name">шестиугольная рамка</h3>
+                            <p class="shop-text">Необычная рамка для украшения из видео <a href="">«Как сделать рамку из подручных средств за 30 минут»</a>. </p>
+                        </div>
+                        <div class="shop-price">
+                            <span class="old-price">500₽</span>
+                            <p>400₽</p>
+                        </div>
+                        <div class="shop-button">
+                            <a href="#0">в магазин</a>
                         </div>
                     </div>
                 </article>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <footer class="footer">
         <div class="socials">
             <ul class="ul-footer">
