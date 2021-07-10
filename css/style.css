@@ -748,6 +748,12 @@ sup{
     .socials{
         width: 90%;
     }
+    .popup-block{
+        width: 60%;
+    }
+    .popup-close{
+        width: 60%;
+    }
 }
 @media (max-width: 1200px) and (orientation: landscape){
     .trend-block{
@@ -810,6 +816,16 @@ sup{
     }
     .socials{
         width: 90%;
+    }
+    .popup-block{
+        width: 90%;
+        height: 90%;
+        padding: 15px;
+    }
+    .popup-close{
+        width: 90%;
+        font-size: 4rem;
+        line-height: 30px;
     }
 }
 @media (max-width: 640px) and (orientation: landscape){
