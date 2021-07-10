@@ -293,6 +293,7 @@ main{
 .main-post img{
     min-width: 381px;
     min-height: 294px;
+    background-color: rgb(75, 75, 75);
 }
 ul{
     padding: 0;
@@ -398,6 +399,7 @@ time{
 .new-post img{
     width: 70px;
     height: 70px;
+    background-color: rgb(75, 75, 75);
 }
 .new-post-content{
     margin-left: 20px;
@@ -743,6 +745,9 @@ sup{
     .search{
         max-width: none;
     }
+    .socials{
+        width: 90%;
+    }
 }
 @media (max-width: 1200px) and (orientation: landscape){
     .trend-block{
@@ -757,12 +762,24 @@ sup{
         background-image: url("../images/banner-mobile.jpg");
         min-width: 320px;
     }
+    .header-first-floor{
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+    .header-second-floor{
+        padding-top: 0;
+    }
     .header-logo{
         width: 100%;
+        background-position: bottom;
+        background-size: 80%;
+        padding-top: 150px;
     }
     .header-title{
-        line-height: normal;
-        font-size: 20px;
+        margin: 0;
+        padding-top: 45px;
+        font-size: 26px;
+        line-height: 36px;
     }
     .trend-block{
         width: 100%;
@@ -790,6 +807,9 @@ sup{
     .article-second-floor{
         width: 285px;
         margin: auto;
+    }
+    .socials{
+        width: 90%;
     }
 }
 @media (max-width: 640px) and (orientation: landscape){
