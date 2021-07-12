@@ -73,8 +73,9 @@ header::before{
 .hamburger{
     display: none;
 }
-.hamburger a{
+.hamburger p{
     font-size: 24px;
+    color: #fff;
 }
 .header-navigation a:nth-child(n+2){
     margin-left: 35px;
@@ -702,6 +703,41 @@ sup{
     .hamburger{
         display: block;
     }
+    .hamburger-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        right: -100%;
+        transition: 0.4s;
+    }
+    .hamburger-container h2{
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-family: "Open Sans";
+        text-align: center;
+    }
+    .hamburger-container ul{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .hamburger-container li{
+        border-bottom: 3px solid #999999;
+    }
+    .hamburger-container a{
+        color: #fff;
+        text-decoration: none;
+        font-family: "Open Sans";
+        text-transform: uppercase;
+        line-height: 35px;
+    }
+    
     .section-second-floor{
         flex-wrap: wrap;
         justify-content: space-between;
@@ -753,14 +789,6 @@ sup{
     }
     .popup-close{
         width: 60%;
-    }
-}
-@media (max-width: 1200px) and (orientation: landscape){
-    .trend-block{
-        width: 24.6%;
-    }
-    .trend-block:not(:first-child){
-        margin-left: 5px;
     }
 }
 @media (max-width: 640px){
@@ -819,7 +847,6 @@ sup{
     }
     .popup-block{
         width: 90%;
-        height: 90%;
         padding: 15px;
     }
     .popup-close{
