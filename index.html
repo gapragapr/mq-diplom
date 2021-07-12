@@ -3,6 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +23,7 @@
                         <li><a href="#0">темы</a></li>
                         <li><a href="#0">контакты</a></li>
                     </ul>
-                    <div class="hamburger"><a href="">&#9776;</a></div>
+                    <div class="hamburger"><p onclick="openHamburger()" href="">&#9776;</p></div>
                 </nav>
             </div>
             <div class="header-second-floor">
@@ -262,10 +263,16 @@
                     </article>
                 </div>
             </section>
-            <section class="sidebar-block">
-                <div class="sidebar-title">
-                    <h2>Поиск</h2>
+            <section class="sudebar-block">
+                    <h2 class="sidebar-block-header">Фидбек</h2>
+                <div class="sidebar-block-content">
+                    <button onclick="openFeedback()">
+                        <span>Оставьте ваш фидбек</span>
+                    </button>
                 </div>
+            </section>
+            <section class="sidebar-block">
+                    <h2 class="sidebar-block-header">Поиск</h2>
                 <div class="sidebar-block-content">
                     <form class="search">
                         <label>
@@ -292,44 +299,6 @@
                             Подписаться
                         </button>
                     </form>
-                </div>
-                <div class="popup-container">
-                    <div class="popup-close">
-                        <div class="popup-close-item">×</div>
-                    </div>
-                    <div class="popup-block">
-                        <div class="popup-title">
-                            <h2>ваш фидбек</h2>
-                        </div>
-                        <form action="" class="popup-form">
-                            <div class="popup-first-floor">
-                                <label for="">
-                                    <span class="popup-span">Как часто вы посещаете наш сайт?</span>
-                                    <select name="popup-select" id="">
-                                        <option value="everyday" selected>Каждый день</option>
-                                        <option value="other-days">Каждые два дня</option>
-                                    </select>
-                                </label>
-                            </div>
-                            <div class="popup-second-floor">
-                                <span class="popup-span">Вы подписаны на e-mail рассылку?</span> <br>
-                                <input type="radio" id="radio1">
-                                <label for="radio1">Да</label>
-
-                                <input type="radio" id="radio2">
-                                <label for="radio2">Нет</label>
-                            </div>
-                            <div class="form-third-floor">
-                                <span class="popup-span">Расскажите, какой контент вы бы хотели видеть на нашем сайте?</span>
-                                <textarea name="comments" id="" rows="5" placeholder="Может,  больше рецептов?"></textarea>
-                                <div class="popup-button">
-                                    <button>
-                                        отправить
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </section>
             <section class="sidebar-block">
@@ -450,5 +419,54 @@
         </div>
         <div class="copiright"><a href="#0">Copiright © 2009-2019 City Blog LLC.</a></div>
     </footer>
+    <div class="hamburger-container" id="hamburger">
+        <ul>
+            <li><a href="">главная</a></li>
+            <li><a href="">посты</a></li>
+            <li><a href="">статьи</a></li>
+            <li><a href="">тэги</a></li>
+            <li><a href="">темы</a></li>
+            <li><a href="">контакты</a></li>
+        </ul>
+        <h2>Я пока не реализовал закрытие по нажатию на паранжу, по этому что бы закрыть бургер- нажми на любую ссылку!</h2>
+    </div>
+    <div id="feedback-popup" class="popup-container">
+        <div class="popup-close">
+            <div class="popup-close-item" onclick="openFeedback(false)">×</div>
+        </div>
+        <div class="popup-block">
+            <div class="popup-title">
+                <h2>ваш фидбек</h2>
+            </div>
+            <form action="" class="popup-form">
+                <div class="popup-first-floor">
+                    <label for="">
+                        <span class="popup-span">Как часто вы посещаете наш сайт?</span>
+                        <select name="popup-select" id="">
+                            <option value="everyday" selected>Каждый день</option>
+                            <option value="other-days">Каждые два дня</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="popup-second-floor">
+                    <span class="popup-span">Вы подписаны на e-mail рассылку?</span> <br>
+                    <input type="radio" id="radio1">
+                    <label for="radio1">Да</label>
+
+                    <input type="radio" id="radio2">
+                    <label for="radio2">Нет</label>
+                </div>
+                <div class="form-third-floor">
+                    <span class="popup-span">Расскажите, какой контент вы бы хотели видеть на нашем сайте?</span>
+                    <textarea name="comments" id="" rows="5" placeholder="Может,  больше рецептов?"></textarea>
+                    <div class="popup-button">
+                        <button>
+                            отправить
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
