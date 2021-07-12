@@ -716,13 +716,6 @@ sup{
         right: -100%;
         transition: 0.4s;
     }
-    .hamburger-container h2{
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-family: "Open Sans";
-        text-align: center;
-    }
     .hamburger-container ul{
         flex-direction: column;
         padding: 30px;
