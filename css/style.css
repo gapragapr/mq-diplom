@@ -48,11 +48,8 @@ header::before{
 .header-logo {
     justify-content: flex-start;
     display: flex;
-    width: 40%;
     height: 40px;
-    background-image: url("../svg/noemi-logo.svg");
-    background-repeat: no-repeat;
-    background-size: 177px;  
+    cursor: pointer; 
 }
 .header-navigation{
     display: flex;
@@ -71,11 +68,18 @@ header::before{
     margin-left: 30px;
 }
 .hamburger{
+    width: 25px;
+    position: relative;
     display: none;
 }
-.hamburger p{
-    font-size: 24px;
-    color: #fff;
+.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+.hamburger-container{
+    display: none;
 }
 .header-navigation a:nth-child(n+2){
     margin-left: 35px;
@@ -202,18 +206,25 @@ header::before{
 }
 .shop-second-floor{
     display: flex;
-    justify-content: space-between;
     padding: 0 25px;
     box-sizing: border-box;
     flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 60px;
 }
 .shop-item{
+    width: 33.3%;
     position: relative;
     margin-bottom: 64px;
 }
 .article-first-floor{
-    display: flex;
-    justify-content: center;
+    padding: 0 30px;
+}
+.article-first-floor picture{
+    width: 100%;
+}
+.article-first-floor img{
+    width: 100%;
 }
 .article-second-floor{
     display: flex;
@@ -221,17 +232,22 @@ header::before{
     justify-content: space-between;
     align-items: baseline;
     position: relative;
-    padding-top: 20px;
-    max-width: 300px;
-    height: 220px;
-    outline: 3px solid #b59f5b;
-    outline-offset: 15px;
+    height: 45%;
+    margin: -30px 13px 0 13px;
+    border: 3px solid #b59f5b;
+    padding: 55px 20px 25px 20px;
+
 }
-.shop-price{
-    padding-top: 40px;
+.shop-price-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 20px;
 }
 .shop-button a{
     text-decoration: none;
+    display: block;
     padding: 15px 15px;
     background-color: #b59f5b;
     text-transform: uppercase;
@@ -552,11 +568,21 @@ select{
 }
 .popup-span{
     font-family: "Open Sans";
+    margin: 0;
 }
 .popup-second-floor input{
-    width: auto;
+    width: 15px;
+    height: 15px;
     margin: 0;
     margin-top: 10px;
+    appearance: none;
+    background-image: url("../svg/form-empty-circle.svg");
+    background-size: cover;
+}
+.popup-second-floor input:checked{
+    content: " ";
+    background-image: url("../svg/form-circle.svg");
+    background-size: cover;
 }
 .popup-second-floor label{
     font-family: "Open Sans";
@@ -774,6 +800,10 @@ sup{
     .search{
         max-width: none;
     }
+    .shop-item{
+        width: 50%;
+        margin-bottom: 13vw;
+    }
     .socials{
         width: 90%;
     }
@@ -798,9 +828,7 @@ sup{
     }
     .header-logo{
         width: 100%;
-        background-position: bottom;
-        background-size: 80%;
-        padding-top: 150px;
+        margin-top: 150px;
     }
     .header-title{
         margin: 0;
@@ -831,9 +859,8 @@ sup{
     .shop-second-floor{
         flex-direction: column;
     }
-    .article-second-floor{
-        width: 285px;
-        margin: auto;
+    .shop-item{
+        width: 100%;
     }
     .socials{
         width: 90%;
