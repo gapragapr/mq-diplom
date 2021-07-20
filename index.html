@@ -13,7 +13,7 @@
     <header>
         <div class="header-container">
             <div class="header-first-floor">
-                <a class="header-logo" href="https://google.com"></a>
+                <img class="header-logo" src="svg/noemi-logo.svg" alt="">
                 <nav class="header-navigation">
                     <ul>
                         <li><a href="#0">главная</a></li>
@@ -23,11 +23,15 @@
                         <li><a href="#0">темы</a></li>
                         <li><a href="#0">контакты</a></li>
                     </ul>
-                    <div class="hamburger"><p onclick="openHamburger()" href="">&#9776;</p></div>
+                    <div class="hamburger" onclick="openHamburger()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
                 </nav>
             </div>
             <div class="header-second-floor">
-                <h1 class="header-title">блог о творчестве, спорте, и образе жизни</h1>
+                <h1 class="header-title">блог о творчестве, спорте, и образе жизни</h1> 
             </div>
         </div>
     </header>
@@ -352,12 +356,14 @@
                             <h3 class="shop-item-name">подушка на диван</h3>
                             <p class="shop-text">Набор из двух подушек с модными принтами. Видео о создании <a href="">здесь</a>.</p>
                         </div>
-                        <div class="shop-price">
-                            <span class="old-price">1000₽</span>
-                            <p>800₽</p>
-                        </div>
-                        <div class="shop-button">
-                            <a href="#0">в магазин</a>
+                        <div class="shop-price-container">
+                            <div class="shop-price">
+                                <span class="old-price">1000₽</span>
+                                <p>800₽</p>
+                            </div>
+                            <div class="shop-button">
+                                <a href="#0">в магазин</a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -374,11 +380,13 @@
                             <h3 class="shop-item-name">игрушка «зайчик»</h3>
                             <p class="shop-text">Интерьерная рукодельная игрушка «Зайчик», созданию которой посвящена <a href="">весенняя серия постов</a> в блоге и несколько подкастов.</p>
                         </div>
-                        <div class="shop-price">
-                            <p>3500₽</p>
-                        </div>
-                        <div class="shop-button">
-                            <a href="#0">в магазин</a>
+                        <div class="shop-price-container">
+                            <div class="shop-price">
+                                <p>3500₽</p>
+                            </div>
+                            <div class="shop-button">
+                                <a href="#0">в магазин</a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -395,12 +403,14 @@
                             <h3 class="shop-item-name">шестиугольная рамка</h3>
                             <p class="shop-text">Необычная рамка для украшения из видео <a href="">«Как сделать рамку из подручных средств за 30 минут»</a>. </p>
                         </div>
-                        <div class="shop-price">
-                            <span class="old-price">500₽</span>
-                            <p>400₽</p>
-                        </div>
-                        <div class="shop-button">
-                            <a href="#0">в магазин</a>
+                        <div class="shop-price-container">
+                            <div class="shop-price">
+                                <span class="old-price">500₽</span>
+                                <p>400₽</p>
+                            </div>
+                            <div class="shop-button">
+                                <a href="#0">в магазин</a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -448,11 +458,11 @@
                     </label>
                 </div>
                 <div class="popup-second-floor">
-                    <span class="popup-span">Вы подписаны на e-mail рассылку?</span> <br>
-                    <input type="radio" id="radio1">
+                    <p class="popup-span">Вы подписаны на e-mail рассылку?</p>
+                    <input type="radio" id="radio1" name="feedback-radio">
                     <label for="radio1">Да</label>
 
-                    <input type="radio" id="radio2">
+                    <input type="radio" id="radio2" name="feedback-radio">
                     <label for="radio2">Нет</label>
                 </div>
                 <div class="form-third-floor">
