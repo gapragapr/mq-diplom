@@ -46,8 +46,6 @@ header::before{
     justify-content: center;
 }
 .header-logo {
-    justify-content: flex-start;
-    display: flex;
     height: 40px;
     cursor: pointer; 
 }
@@ -216,6 +214,8 @@ header::before{
     width: 33.3%;
     position: relative;
     margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
 }
 .article-first-floor{
     padding: 0 30px;
@@ -232,10 +232,10 @@ header::before{
     justify-content: space-between;
     align-items: baseline;
     position: relative;
-    height: 45%;
     margin: -30px 13px 0 13px;
     border: 3px solid #b59f5b;
     padding: 55px 20px 25px 20px;
+    flex-grow: 1;
 
 }
 .shop-price-container{
@@ -244,16 +244,18 @@ header::before{
     justify-content: space-between;
     align-items: flex-end;
     padding-top: 20px;
+    font-size: 20px;
 }
 .shop-button a{
     text-decoration: none;
     display: block;
-    padding: 15px 15px;
+    padding: 15px 28px;
     background-color: #b59f5b;
     text-transform: uppercase;
     color: #fff;
     font-family: "Open Sans";
     font-weight: 600;
+    font-size: 13px;
 }
 .shop-price p{
     margin: 0;
@@ -778,7 +780,8 @@ sup{
     .main-post{
         flex-direction: column;
         width: 100%;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
         border-bottom: 3px solid #eeeeee;
     }
     .post-content{
@@ -802,7 +805,6 @@ sup{
     }
     .shop-item{
         width: 50%;
-        margin-bottom: 13vw;
     }
     .socials{
         width: 90%;
@@ -829,6 +831,7 @@ sup{
     .header-logo{
         width: 100%;
         margin-top: 150px;
+        height: 62px;
     }
     .header-title{
         margin: 0;
@@ -855,6 +858,10 @@ sup{
     main, aside{
         width: 100%;
         max-width: none;
+    }
+    .main-post{
+        padding-bottom: 25px;
+        margin-bottom: 35px;
     }
     .shop-second-floor{
         flex-direction: column;
